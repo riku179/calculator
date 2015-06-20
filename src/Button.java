@@ -7,27 +7,26 @@ import java.awt.event.ActionListener;
  */
 public class Button extends JButton {
 
-	private String label;
 	private int num;
 
 	public Button(String s) {
 		super(s);
 		int i = Integer.parseInt(s);
 		if(i <= 9) {
-			this.label = s;
+			this.setText(s);
 		} else {
 			switch (i) {
-				case 10: this.label = "+";
+				case 10: this.setText("+");
 					break;
-				case 11: this.label = "-";
+				case 11: this.setText("-");
 					break;
-				case 12: this.label = "*";
+				case 12: this.setText("*");
 					break;
-				case 13: this.label = "/";
+				case 13: this.setText("/");
 					break;
-				case 14: this.label = "=";
+				case 14: this.setText("=");
 					break;
-				case 15: this.label = "AC";
+				case 15: this.setText("AC");
 					break;
 			}
 		}
@@ -37,10 +36,6 @@ public class Button extends JButton {
 
 	public int bnum() {
 		return this.num;
-	}
-
-	public String getlable() {
-		return this.label;
 	}
 }
 

@@ -8,7 +8,6 @@ public class Display extends JLabel {
 
 	public Display() {
 		super();
-		this.setText("0");
 		this.setVisible(true);
 		this.setFont(new Font("Century", Font.PLAIN, 20));
 	}
